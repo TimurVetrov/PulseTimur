@@ -1,0 +1,41 @@
+.consultation {
+    min-height: 680px;
+    padding: 100px 0 92px 0;
+    background: url('../img/consultation.jpg') center (center/cover) no-repeat;
+    &__descr {
+        margin-top: 8px;
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+    .error {
+        border: 1px solid $main-color;
+    }
+    label.error {
+        color: #FFF;
+    }
+    @media (max-width: 1200px) {
+        &__descr {
+            margin-left: 20px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        &__descr {
+            line-height: 25px;
+            font-size: 16px;
+        }
+    }
+    
+    @media (max-width: 575px) {
+        min-height: 500px;
+        padding: 60px 0 70px 0;
+        &__descr {
+            line-height: 20px;
+            font-size: 14px;
+            margin-left: 0;
+            text-align: center;
+        }
+    }   
+}

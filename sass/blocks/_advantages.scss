@@ -1,0 +1,94 @@
+.advantages {
+    padding: 70px 0 80px 0;
+    background-color: #f6f6f6;
+    &__wrapper {
+        margin-top: 65px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+    }
+    &__subtitle {
+        color: #0D0D0D;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 30px;
+    }
+    &__descr {
+        color: #0D0D0D;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        margin-top: 20px;
+        a {
+            color: $main-color;
+            text-decoration: underline;
+            text-transform: uppercase;
+            &:hover {
+                cursor: pointer;
+                text-shadow: 1px 1px 1px $main-color;
+            }
+        }
+    }
+    &__icon {
+        &_animated {
+            animation: heartbeat 1.5s ease infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+        &_big {
+            &:hover {
+                -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+        }  
+    }
+
+    @media (max-width: 1200px) {
+        &__wrapper {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        min-height: 400px;
+        padding: 50px 0 70px 0;
+        &__wrapper {
+            margin-top: 50px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        &__item {
+            width: calc(50% - 10px);
+            &:nth-child(3) {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        &__wrapper {
+            margin-top: 50px;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        &__item {
+            width: 100%;
+        }
+        &__descr {
+            width: 80%;
+        }
+    }
+}

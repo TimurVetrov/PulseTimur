@@ -1,0 +1,50 @@
+.feed-form {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 15px;
+    input {
+        height: 54px;
+        border-radius: 5px;
+        background-color: #fff;
+        border: none;
+        padding: 0 20px;
+        color: #4B4B4B;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 66px;
+        &:-moz-placeholder {
+            color: $main-color;
+        }
+        &:-ms-input-placeholder {
+            color: $main-color;
+        }
+    }
+    .error {
+        border: 1px solid $main-color;
+    }
+    label.error {
+        margin-bottom: 5;
+        font-size: 12px;
+        text-align: center;
+        border: none;
+    }
+    &_mt25 {
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+
+    @media (max-width: 1200px) {
+        margin-left: 20px;
+    }
+
+    @media (max-width: 575px) {
+        align-items: center;
+        margin: 36px auto 0 auto;
+        input { 
+            height: 40px;
+            text-align: center;
+        }
+    }
+}
